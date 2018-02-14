@@ -1,3 +1,10 @@
 language: ruby
 rvm:
   - 2.3.1
+  - 2.5.0
+deploy:
+  provider: script
+  script: sh bin/package_push.sh
+  on:
+    branch: master
+    rvm: 2.5.0
